@@ -1,0 +1,19 @@
+{% load static %}
+<header>
+    <div class="header-container">
+        <div class="nio" id="nio1">
+            <div class="photo">
+                <img src="{% static 'images/logo1.jpg' %}" alt="Logo">
+            </div> 
+            <div class="name">RAJASHEKARA REDDY G O</div>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="nio" id="nio2">
+            <div class="nav"><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">HOME</a></div>
+            <div class="nav"><a href="{% url 'Education' %}" class="{% if request.resolver_match.url_name == 'Education' %}active{% endif %}">EDUCATION</a></div> 
+            <div class="nav"><a href="{% url 'Skills' %}" class="{% if request.resolver_match.url_name == 'Skills' %}active{% endif %}">SKILLS</a></div> 
+            <div class="nav"><a href="{% url 'projects' %}" class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}">PROJECTS</a></div>
+            <div class="nav"><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">CONTACTS</a></div> 
+        </div>
+    </div>
+</header>

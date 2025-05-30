@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="home-container">
+  <div class="profile-section">
+    <img src="{% static 'images/profile.jpeg' %}" alt="Profile Photo" class="profile-img"> 
+    <h1>Rajashekara Reddy G O</h1>
+    <p class="title">Python Full Stack Developer</p>
+    <p class="university">T. John College, Bangalore</p>
+    <div class="social-icons">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-reddit"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>Rajashekara Reddy G O</strong>, a passionate <strong>Python Full Stack Developer</strong>. I enjoy building responsive web applications using <strong>Python, HTML, CSS, JavaScript, Django</strong>, and <strong>SQL</strong>.</p>
+
+    <p>I have experience working on <strong>Django projects</strong>, especially in the <strong>Movie Ticket booking</strong>, and enjoy solving real-world problems through code.</p>
+
+    <p>When I’m not coding, I enjoy exploring tech news, gaming, and learning about new development frameworks and tools.</p>
+  </div>
+</div>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 10px;
+    background-color: #f4f6fc;
+    color: #333;
+    justify-content: center;
+  }
+
+  .profile-section {
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .title {
+    font-size: 18px;
+    color: #666;
+  }
+
+  .university {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    color: #666;
+    transition: color 0.3s;
+  }
+
+  .social-icons i:hover {
+    color: #6c63ff;
+  }
+
+  .about-section {
+    flex: 2;
+    min-width: 300px;
+  }
+
+  .about-section h2 {
+    color: #6c63ff;
+    margin-bottom: 10px;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+{% endblock %}

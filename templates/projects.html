@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    body {
+      background-color: #f3f4f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      color: #6c63ff;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 25px 20px;
+      width: 220px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      color: #333;
+      transition: transform 0.3s ease;
+    }
+
+    .card i {
+      font-size: 24px;
+      display: block;
+      margin-bottom: 10px;
+      color: #6c63ff;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .github-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: #6c63ff;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .github-link:hover {
+      background-color: #574fd6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="card-grid">
+        <div class="card">
+          <i class="fa-solid fa-note-sticky"></i>
+          <div>Online Notes Sharing System</div>
+          <a href="#" class="github-link">GitHub</a> 
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-disease"></i>
+          <div>Disease Prediction</div>
+          <a href="https://github.com/RajashekaraRedddy/Disease-Prediction" class="github-link">GitHub</a>
+        </div>
+        <div class="card">
+          <i class="fa-regular fa-newspaper"></i>
+          <div>Article Management System</div>
+          <a href="#" class="github-link">GitHub</a>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-film"></i>
+          <div>Movie Ticket Booking System</div>
+          <a href="#" class="github-link">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+{% endblock %}

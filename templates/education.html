@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="page-title">Education</div>
+
+<div class="education-section">
+  
+  <div class="edu-item">
+    <img src="{% static 'images/Tjohn.jpg' %}" alt="T John Logo" class="edu-logo">
+    <div class="edu-content">
+      <div class="edu-title">T John College</div>
+      <div class="edu-university">Bangalore University</div>
+      <div class="edu-degree">Master of Computer Application</div>
+      <div class="edu-dates">February 2022 - November 2024</div>
+      <div class="edu-desc">CGPA: 7.74</div>
+    </div>
+  </div>
+
+  <div class="edu-item">
+    <img src="{% static 'images/AESnational.jpg' %}" alt="AES National Logo" class="edu-logo">
+    <div class="edu-content">
+      <div class="edu-title">AES National College</div>
+      <div class="edu-university">Bangalore North University</div>
+      <div class="edu-degree">Bachelor of Computer Application</div>
+      <div class="edu-dates">August 2019 - September 2021</div> 
+      <div class="edu-desc">CGPA: 9.09</div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .page-title {
+    text-align: center;
+    font-size: 28px;
+    color: #6c63ff;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  .education-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -4%;
+  }
+
+  .edu-item {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .edu-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .edu-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-left: 15%;
+  }
+
+  .edu-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: fit-content;
+  }
+
+  .edu-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .edu-university {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .edu-degree {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  .edu-dates {
+    color: #666;
+    font-size: 14px;
+    margin: 4px 0 10px 0;
+  }
+
+  .edu-desc {
+    font-size: 15px;
+  }
+</style>
+{% endblock %}
