@@ -5,14 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Document{% endblock %}</title>
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <link rel="stylesheet" href="{% static 'js/script.js' %}">
+  
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<script src="{% static 'js/script.js' %}"></script> 
+
 
 </head>
 <body>
   <div class="wrapper">
     {% block header %}
       {% include 'partials/header.html' %}
+      
     {% endblock %}
 
     <main>
