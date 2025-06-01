@@ -14,9 +14,136 @@
 <body>
   <div class="wrapper">
     {% block header %}
-      {% include 'partials/header.html' %}
-      
+      {% include 'partials/header.html' %} 
     {% endblock %}
+
+    <style>
+      html, body {
+      height: 100%;
+      margin: 0 auto;
+      padding: 0;
+      overflow-x: hidden; 
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px; 
+    }
+
+    /* Header Styles - Modified to move content right */
+    .header-container {
+        height: 70px;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;
+        background-color: #6c63ff;
+        color: white;
+        position: relative;
+    }
+
+    .nio {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-right: auto; /* Pushes everything else to the right */
+    }
+
+    .photo img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      font-size: 18px;
+      border-bottom: 2px solid white;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Footer - Ensured it stays at bottom */
+    footer {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      background-color: rgb(156, 144, 144);
+      margin-top: auto; /* Ensures footer stays at bottom */
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #6c63ff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .nav-links.show {
+    right: 0;
+  }
+  
+  .header-container {
+    position: relative;
+    z-index: 1002;
+
+  .form-row {
+    flex: wrap;
+  }
+  }
+}
+    </style>
 
     <main>
       {% block content %}
@@ -24,7 +151,7 @@
     </main>
 
     {% block footer %}
-      {% include 'partials/footer.html' %}
+      {% include 'partials/footer.html' %} 
     {% endblock %}
   </div>
 
